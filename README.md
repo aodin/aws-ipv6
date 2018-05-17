@@ -1,6 +1,7 @@
 AWS IPv6
 ====
 
+Terraform config for an IPv6 capable EC2 instance on AWS.
 
 [Official AWS documentation on IPv6 EC2 instances](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-subnets-commands-example-ipv6.html)
 
@@ -15,3 +16,8 @@ AWS IPv6
 4. Run `terraform apply "plan.tmp"`
 
 5. If you'd like to destroy the created infrastructure, run `terraform destroy`
+
+
+Happy hacking!
+
+aodin, 2018
