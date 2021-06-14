@@ -17,7 +17,7 @@ variable "key_name" {
 
 # Ubuntu AMIs from https://cloud-images.ubuntu.com/locator/ec2/
 variable "instance_ami" {
-  default = "ami-043505d1b57b5d3e3" # Ubuntu 20.04 HVM/EBS in us-west-2
+  default = "ami-0a1b477074e2f1708" # Ubuntu 20.04 HVM/EBS in us-west-2
 }
 
 variable "instance_size" {
