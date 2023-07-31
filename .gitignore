@@ -1,4 +1,7 @@
 plan.tmp
 .terraform
+
+# The following files should be committed in a production repository
 terraform.tfstate
 terraform.tfstate.backup
+.terraform.lock.hcl

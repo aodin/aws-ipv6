@@ -17,20 +17,14 @@ variable "key_name" {
 
 # Ubuntu AMIs from https://cloud-images.ubuntu.com/locator/ec2/
 variable "instance_ami" {
-  default = "ami-0a1b477074e2f1708" # Ubuntu 20.04 HVM/EBS in us-west-2
+  default = "ami-06edaf01ee52adb1e" # Ubuntu 22.04 LTS arm64 in us-west-2
 }
 
 variable "instance_size" {
-  default = "t3a.nano"
+  default = "t4g.nano"
 }
 
 data "aws_availability_zones" "available" {}
-
-data "template_file" "userdata" {
-  template = file("userdata.tpl")
-
-  vars = {}
-}
 
 # AWS will assign the VPC an IPv6 CIDR with a prefix length of /56
 resource "aws_vpc" "ipv6_vpc" {
@@ -132,7 +126,6 @@ resource "aws_instance" "ipv6_instance" {
 
   vpc_security_group_ids      = [aws_security_group.ipv6_security.id]
   associate_public_ip_address = true
-  user_data                   = data.template_file.userdata.rendered
 
   tags = {
     Name = "ipv6_instance"
