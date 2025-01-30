@@ -17,7 +17,7 @@ variable "key_name" {
 
 # Ubuntu AMIs from https://cloud-images.ubuntu.com/locator/ec2/
 variable "instance_ami" {
-  default = "ami-06edaf01ee52adb1e" # Ubuntu 22.04 LTS arm64 in us-west-2
+  default = "ami-0acefc55c3a331fa8" # Ubuntu 24.04 LTS arm64 in us-west-2
 }
 
 variable "instance_size" {
